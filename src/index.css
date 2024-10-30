@@ -1,0 +1,121 @@
+.container{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+}
+.input_box{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#file{
+    border: 5px dotted black;
+    border-radius: 50px;
+    padding: 2px;
+    font-size: 20px;
+    color: rgb(0, 255, 247);
+    cursor: pointer;
+}
+
+#file::-webkit-file-upload-button{
+    background-image: linear-gradient(45deg, rgb(10, 125, 126), black);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.uploadBtn{
+    padding: 12px 38px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background: #04e7c1;
+    color:rgba(0, 8, 32, 0.919);
+    cursor: pointer;
+}
+.updateBtn{
+    padding: 12px 38px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    background: #e78804;
+    color:rgba(0, 8, 32, 0.919);
+    cursor: pointer;
+}
+.editImgBox{
+    margin: 15px auto 0px auto;
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+}
+.editImgBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.imgbox{
+    height: 720px;
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 10px;
+    overflow-y: scroll;
+}
+.images{
+    position: relative;
+    height: 230px;
+    width: 180px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -96px;
+    top: 0;
+    background: linear-gradient(329deg, #353770 -10.96%, rgba(28, 30, 83, 0.42) 103.96%);
+    /* padding: 312px 0 76px 48px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    opacity: 0;
+    transition: all linear 0.5s;
+}
+.images:hover .overlay{
+    left: 0;
+    opacity: 1;
+}
+.editBtn, .deleteBtn{
+    padding: 15px 23px;
+    color: #fff;
+    border: 2px solid rgba(244, 246, 252, 0.20);
+    border-radius: 21px;
+    background: rgba(0, 8, 32, 0.824);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all linear 0.3s;
+    cursor: pointer;
+}
+.editBtn:hover, .deleteBtn:hover{
+    background: #fcd980bb;
+    color: black;
+}
